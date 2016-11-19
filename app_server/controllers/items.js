@@ -29,13 +29,8 @@ var _showError = function (req, res, status) {
 
 var renderHomepage = function(req, res, responseBody){
     console.log("In renderHomepage");
-  res.render('index', {
-    title: 'Items for bid',
-    pageHeader: {
-      title: 'Bidding',
-      strapline: 'Find items to bid on'
-    }
-  });
+  res.render('layout', {
+    title: 'Items for bid'});
 };
 
 
@@ -49,5 +44,5 @@ module.exports.itemList = function(req, res){
 
 module.exports.angularApp = function(req,res){
     console.log("in AngularApp");
-  res.render('layout');
+  renderHomepage(req,res);
 };

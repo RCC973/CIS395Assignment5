@@ -1,9 +1,11 @@
 /**
  * Created by julieanderson on 11/19/16.
  */
-angular
-    .module('myApp')
-    .controller('homeCtrl', homeCtrl);
+(function (){
+    angular
+        .module('myApp')
+        .controller('homeCtrl', homeCtrl);
+
 
 function homeCtrl () {
     var vm = this;
@@ -15,3 +17,4 @@ function homeCtrl () {
         content: "Here is the sidebar"
     };
 }
+})();
