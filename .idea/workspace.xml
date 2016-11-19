@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9524914-ac7f-4480-b87b-490ea3631027" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_client/app.js" afterPath="$PROJECT_DIR$/app_client/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_client/home/home.view.html" afterPath="$PROJECT_DIR$/app_client/home/home.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/controllers/items.js" afterPath="$PROJECT_DIR$/app_server/controllers/items.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/layout.jade" afterPath="$PROJECT_DIR$/app_server/views/layout.jade" />
-    </list>
+    <list default="true" id="e9524914-ac7f-4480-b87b-490ea3631027" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -458,7 +452,7 @@
       <workItem from="1479572544683" duration="574000" />
       <workItem from="1479573435837" duration="2863000" />
       <workItem from="1479581341882" duration="12128000" />
-      <workItem from="1479594566535" duration="2306000" />
+      <workItem from="1479594566535" duration="2333000" />
     </task>
     <task id="LOCAL-00001" summary="Add home view">
       <created>1479590003655</created>
@@ -481,11 +475,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479591734490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add some error checking lines">
+      <created>1479597102108</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479597102108</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22681000" />
+    <option name="totallyTimeSpent" value="22708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="853" y="22" width="1058" height="1053" extended-state="0" />
@@ -549,7 +550,8 @@
     <MESSAGE value="Add home view" />
     <MESSAGE value="Change home.view.html" />
     <MESSAGE value="Fix missing quotes in app.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix missing quotes in app.js" />
+    <MESSAGE value="Add some error checking lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some error checking lines" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
