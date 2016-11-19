@@ -1,5 +1,7 @@
 console.log("in items.js");
 
+
+
 var request = require('request');
 var apiOptions = {
   server : "http://localhost:3000"
@@ -29,8 +31,7 @@ var _showError = function (req, res, status) {
 
 var renderHomepage = function(req, res, responseBody){
     console.log("In renderHomepage");
-  res.render('layout', {
-    title: 'Items for bid'});
+  res.render('layout', { title: 'myApp'});
 };
 
 
@@ -46,3 +47,4 @@ module.exports.angularApp = function(req,res){
     console.log("in AngularApp");
   renderHomepage(req,res);
 };
+
