@@ -1,12 +1,15 @@
+console.log("in index.js");
+
+
 var express = require('express');
 var router = express.Router();
-var ctrlLocations = require('../controllers/items');
+var ctrlItems = require('../controllers/items');
 
 
 
-router.get('/', ctrlItems.angularApp);
+
 
 /* Items list page */
-router.get('/', ctrlLocations.itemList);
+router.get('/', ctrlItems.angularApp);
 
 module.exports = router;

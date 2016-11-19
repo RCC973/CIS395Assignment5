@@ -1,3 +1,5 @@
+console.log("in items.js");
+
 var request = require('request');
 var apiOptions = {
   server : "http://localhost:3000"
@@ -26,6 +28,7 @@ var _showError = function (req, res, status) {
 };
 
 var renderHomepage = function(req, res, responseBody){
+    console.log("In renderHomepage");
   res.render('index', {
     title: 'Items for bid',
     pageHeader: {
@@ -35,12 +38,16 @@ var renderHomepage = function(req, res, responseBody){
   });
 };
 
+
 /* GET 'home' page */
+
 module.exports.itemList = function(req, res){
+    console.log("itemList");
   renderHomepage(req, res);
 };
 
 
 module.exports.angularApp = function(req,res){
-  res.render('layout', {title: 'myApp!'});
+    console.log("in AngularApp");
+  res.render('layout');
 };
