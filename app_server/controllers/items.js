@@ -39,3 +39,8 @@ var renderHomepage = function(req, res, responseBody){
 module.exports.itemList = function(req, res){
   renderHomepage(req, res);
 };
+
+
+module.exports.angularApp = function(req,res){
+  res.render('layout', {title: 'myApp!'});
+};

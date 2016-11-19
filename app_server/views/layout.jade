@@ -9,6 +9,7 @@ html(ng-app='app')
   body
     .navbar.navbar-default.navbar-fixed-top
       .container
+        div(ng-view)
         .navbar-header
           a.navbar-brand(href='/') Bidding
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
@@ -20,5 +21,7 @@ html(ng-app='app')
       block content
 
     script(src='/angular/main.js')
+    script(src='/lib/angular-route.min.js')
+    script(src='/app.js')
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')

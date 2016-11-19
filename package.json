@@ -1,5 +1,5 @@
 {
-  "name": "cis395assignment5",
+  "name": "julieanderson-assignment5",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,6 @@
     "express": "~4.14.0",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
-    "mongoose": "~3.8.40",
-    "request": "~2.51.0"
+    "serve-favicon": "~2.3.0"
   }
 }

@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('assignment5:server');
+var debug = require('debug')('julieanderson-assignment5:server');
 var http = require('http');
 
 /**
