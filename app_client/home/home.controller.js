@@ -6,7 +6,8 @@
         .module('myApp')
         .controller('homeCtrl', homeCtrl)
 
-    function homeCtrl (myAppData) {
+    homeCtrl.$inject = ['$http'];
+    function homeCtrl ($http) {
         var vm = this;
         vm.pageHeader = {
             title: 'This is my App!',
@@ -16,24 +17,20 @@
             content: "Here is the sidebar"
         };
 
+        vm.getData = function() {
+            console.log("sending request");
+            $http.get('/api/items')
+                .success(function (d) {
+                    if (d) {
+                        vm.data = d;
+                        console.log(vm.data);
+                    }
+                    console.log(d);
+                });
+        };
 
-
-        vm.data = { items : myAppData};
-
-
-       /*
-       vm.data = {
-            items:
-            [{
-            name: "item1",
-            description: "A weird thing",
-            startingPrice: 12.00
-        },{
-            name: "item2",
-            description: "Another weird thing",
-            startingPrice: 24.00
-        }]};*/
-
+        vm.getData();
+        console.log("got data");
 
     }
 })();

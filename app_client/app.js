@@ -29,9 +29,6 @@
                 }];
     };
     */
-   var myAppData = function($http){
-       return $http.get('/api/items');
-   }
 
 
     angular
