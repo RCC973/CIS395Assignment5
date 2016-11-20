@@ -8,6 +8,7 @@ var sendJSONresponse = function(res, status, content) {
 
 /* GET list of items */
 module.exports.itemsForBid = function(req, res) {
+    console.log('in itemsForBid')
     Item
         .find()
         .exec(

@@ -30,7 +30,7 @@
     };
     */
    var myAppData = function($http){
-       return $http.get('/items');
+       return $http.get('/api/items');
    }
 
 
