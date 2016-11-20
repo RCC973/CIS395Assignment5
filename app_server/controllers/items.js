@@ -48,3 +48,8 @@ module.exports.angularApp = function(req,res){
   renderHomepage(req,res);
 };
 
+module.exports.addItem = function(req, res) {
+  console.log("in Add Item/items.js");
+  renderHomepage(req,res);
+
+};

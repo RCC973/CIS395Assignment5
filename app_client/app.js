@@ -14,6 +14,11 @@
                 controller: 'homeCtrl',
                 controllerAs: 'vm'
             })
+            .when('/add', {
+                templateUrl: 'add/add.view.html',
+                controller: 'addCtrl',
+                controllerAs: 'vm'
+            })
             .otherwise({redirectTo: '/'});
     }
 
@@ -34,7 +39,7 @@
     angular
         .module('myApp')
         .config(['$routeProvider', config])
-        .service('myAppData', myAppData);
+        //.service('myAppData', myAppData);
 
 
 

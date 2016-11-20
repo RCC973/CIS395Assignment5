@@ -11,5 +11,6 @@ var ctrlItems = require('../controllers/items');
 
 /* Items list page */
 router.get('/', ctrlItems.angularApp);
+router.get('/add', ctrlItems.addItem);
 
 module.exports = router;
