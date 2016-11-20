@@ -4,11 +4,9 @@
 (function (){
     angular
         .module('myApp')
-        .controller('homeCtrl', homeCtrl);
+        .controller('homeCtrl', homeCtrl)
 
-
-
-    function homeCtrl () {
+    function homeCtrl (myAppData) {
         var vm = this;
         vm.pageHeader = {
             title: 'This is my App!',
@@ -17,8 +15,16 @@
         vm.sidebar = {
             content: "Here is the sidebar"
         };
-        vm.data = {
-            items:[{
+
+
+
+        vm.data = { items : myAppData};
+
+
+       /*
+       vm.data = {
+            items:
+            [{
             name: "item1",
             description: "A weird thing",
             startingPrice: 12.00
@@ -26,7 +32,7 @@
             name: "item2",
             description: "Another weird thing",
             startingPrice: 24.00
-        }]}
+        }]};*/
 
 
     }

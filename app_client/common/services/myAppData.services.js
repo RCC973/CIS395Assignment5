@@ -1,22 +1,23 @@
 /**
  * Created by julieanderson on 11/20/16.
  */
-(function() {
+/*(function() {
 
     angular
         .module('myApp')
         .service('myAppData', myAppData);
 
-    myAppData.$inject = ['$http'];
+
     function myAppData ($http) {
-        var listOfItems = function () {
-            return $http.get('/items');
+        var items = function () {
+            return $http.get('/api/items');
         };
         return {
-            listOfItems : listOfItems
+            items : items
         };
     }
 
 })();
+*/
 
 

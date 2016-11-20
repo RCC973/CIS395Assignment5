@@ -17,8 +17,28 @@
             .otherwise({redirectTo: '/'});
     }
 
+   /* var myAppData = function(){
+        return [{
+                    name: "item1",
+                    description: "A weird thing",
+                    startingPrice: 12.00
+                },{
+                    name: "item2",
+                    description: "Another weird thing",
+                    startingPrice: 24.00
+                }];
+    };
+    */
+   var myAppData = function($http){
+       return $http.get('/items');
+   }
+
+
     angular
         .module('myApp')
-        .config(['$routeProvider', config]);
+        .config(['$routeProvider', config])
+        .service('myAppData', myAppData);
+
+
 
 })();

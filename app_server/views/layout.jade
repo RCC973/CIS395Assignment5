@@ -19,12 +19,14 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
+    .container
+      .row
+        h1 List of Items up for Bid
 
     .container
       div(ng-view)
         block content
 
-      p Some stuff here
       footer
         .row
           .col-xs-12
@@ -34,5 +36,6 @@ html
 
 script(src='/app.js')
 script(src='/home/home.controller.js')
+script(src='/common/services/myAppData.services.js')
 script(src='/javascripts/jquery-1.11.1.min.js')
 script(src='/bootstrap/js/bootstrap.min.js')

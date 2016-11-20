@@ -1,9 +1,18 @@
 
-<p>stuff</p>
-<p>More Stuff</p>
-<p>Even More Stuff</p>
-<p>{{2+2}}</p>
-<p>{{vm.pageHeader.title}}</p>
+<div id="banner" class="page-header">
+    <div class="row">
+        <div class="col-lg-6"></div>
+        <h1>
+            {{ vm.pageHeader.title }}
+            <small>{{ vm.pageHeader.strapline }}</small>
+        </h1>
+    </div>
+</div>
+
+<div> {{vm.message}}</div>
+
+
+
 <div ng-repeat="item in vm.data.items">
     <ul>
         <li>{{ item.name + "  " + item.description + " " + item.startingPrice }}</h4>
