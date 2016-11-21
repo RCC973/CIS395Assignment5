@@ -10,11 +10,8 @@
     function homeCtrl ($http) {
         var vm = this;
         vm.pageHeader = {
-            title: 'This is my App!',
+            title: 'Welcome to BidNow!',
             strapline: 'Bid on stuff and things'
-        };
-        vm.sidebar = {
-            content: "Here is the sidebar"
         };
 
         vm.getData = function() {
