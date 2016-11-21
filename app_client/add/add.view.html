@@ -9,18 +9,18 @@
     </div>
 </div>
 
-<form>
+<form action="/api/items", method="post", role="form">
     <div class="form-group">
         <label for="name">Item Name:</label>
-        <input class="form-control" id="name">
+        <input class="form-control" id="name" name="name">
     </div>
     <div class="form-group">
         <label for="description">Description:</label>
-        <input class="form-control" id="description">
+        <input class="form-control" id="description" name="description">
     </div>
     <div class="form-group">
         <label for="startingPrice">Starting Price:</label>
-        <input class="form-control" id="startingPrice">
+        <input class="form-control" type="number" id="startingPrice" name="startingPrice">
     </div>
 
     <button type="submit" class="btn btn-default">Submit</button>
