@@ -1,20 +1,14 @@
-
-<div class="container">
-    <div class="row">
-        <a class="btn btn-primary" href="#add">Add Item</a>
-    </div>
-
-
-    <div class="row">
-        <div class="col-lg-6"></div>
-            <h1>{{ vm.pageHeader.title }}</h1>
-        </div>
+<div class="row">
+    <div class="col-lg-6">
+        <h1>{{ vm.pageHeader.title }}</h1>
     </div>
 </div>
 
+<p>{{id}}</p>
+
 <div class="panel panel-default" ng-repeat="item in vm.data">
     <!-- Default panel contents -->
-    <div class="panel-heading"><a ng-href="#detail/{{item.id}}">{{item.name}}</a></div>
+    <div class="panel-heading">{{item.name}}</div>
     <div class="panel-body">
         <p>{{item.description}}</p>
     </div>

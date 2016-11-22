@@ -19,6 +19,11 @@
                 controller: 'addCtrl',
                 controllerAs: 'vm'
             })
+            .when('/detail', {
+                templateUrl: 'detail/detail.view.html',
+                controller: 'detailCtrl',
+                controllerAs: 'vm'
+        })
             .otherwise({redirectTo: '/'});
     }
 
