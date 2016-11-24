@@ -20,10 +20,15 @@
                 controllerAs: 'vm'
             })
             .when('/item/:itemId', {
-                templateUrl: 'detail/detail.view.html',
-                controller: 'detailCtrl',
+            templateUrl: 'detail/detail.view.html',
+            controller: 'detailCtrl',
+            controllerAs: 'vm'
+            })
+            .when('/bid/:itemId', {
+                templateUrl: 'bid/bid.view.html',
+                controller: 'bidCtrl',
                 controllerAs: 'vm'
-        })
+            })
             .otherwise({redirectTo: '/'});
     }
 

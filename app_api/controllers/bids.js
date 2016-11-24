@@ -35,8 +35,7 @@ var doAddBid = function(req, res, item) {
     } else {
         item.bids.push({
             username: req.body.username,
-            rating: req.body.rating,
-            bidText: req.body.bidText
+            price: req.body.price
         });
         item.save(function(err, thisBid) {
             var thisbid;
