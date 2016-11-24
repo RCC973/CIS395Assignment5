@@ -49,7 +49,7 @@
     angular
         .module('myApp')
         .config(['$routeProvider', config])
-        .service('myAppData', myAppData);
+
 
 
 

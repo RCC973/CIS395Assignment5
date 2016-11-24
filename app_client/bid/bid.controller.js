@@ -5,15 +5,19 @@
 (function (){
     angular
         .module('myApp')
-        .controller('bidCtrl', bidCtrl)
+        .controller('bidCtrl', bidCtrl);
 
-    bidCtrl.$inject = ['$http'];
-    function bidCtrl ($http) {
+    bidCtrl.$inject = ['$http', '$routeParams'];
+    function bidCtrl ($http, $routeParams) {
         var vm = this;
+        vm.itemid = $routeParams.itemId;
+        vm.url = "/api/items/" + vm.itemid + "/bids";
+
         vm.pageHeader = {
             title: ' Place Your Bid!',
             strapline: 'add your item'
         };
+
 
 
     }
