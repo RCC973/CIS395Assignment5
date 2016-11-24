@@ -14,14 +14,15 @@
 
 <div class="panel panel-default" ng-repeat="item in vm.data">
     <!-- Default panel contents -->
-    <div class="panel-heading"><a ng-href="#detail/{{item.id}}">{{item.name}}</a></div>
-    <div class="panel-body">
+    <div class="panel-heading"><a href="/#/item/{{item._id}}">{{item.name}}</a></div>
+    <!-- <div class="panel-body">
         <p>{{item.description}}</p>
     </div>
 
-    <!-- List group -->
+
     <ul class="list-group" ng-repeat="bid in item.bids">
         <li class="list-group-item">{{ bid.username + "  " +  bid.price }}</li>
 
     </ul>
+    -->
 </div>

@@ -10,14 +10,18 @@
 
  myAppData.$inject = ['$http'];
  function myAppData ($http) {
-        var items = function () {
-            console.log("sending request from service");
-            return $http.get('/api/items');
-        };
-        return {
-            items : items
-        };
-    }
+     var items = function () {
+         console.log("sending request");
+         $http.get('/api/items')
+             .success(function (d) {
+                 if (d) {
+                     return d;
+                     console.log(vm.data);
+                 }
+                 console.log(d);
+             });
+     };
+ }
 
 })();
 

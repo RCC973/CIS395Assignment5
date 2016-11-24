@@ -4,10 +4,11 @@
 (function (){
     angular
         .module('myApp')
-        .controller('homeCtrl', homeCtrl)
+        .controller('homeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$http'];
-    function homeCtrl ($http) {
+
+    homeCtrl.$inject = ['$http', 'myAppData'];
+    function homeCtrl ($http,myAppData) {
         var vm = this;
         vm.pageHeader = {
             title: 'Welcome to BidNow!',
@@ -27,6 +28,7 @@
         };
 
         vm.getData();
+
         console.log("got data");
 
     }

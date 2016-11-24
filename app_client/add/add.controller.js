@@ -13,24 +13,7 @@
             title: 'Add Item!',
             strapline: 'add your item'
         };
-        vm.sidebar = {
-            content: "Here is the sidebar"
-        };
 
-        vm.getData = function() {
-            console.log("sending request");
-            $http.get('/api/items')
-                .success(function (d) {
-                    if (d) {
-                        vm.data = d;
-                        console.log(vm.data);
-                    }
-                    console.log(d);
-                });
-        };
-
-        vm.getData();
-        console.log("got data");
 
     }
 })();

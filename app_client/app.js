@@ -19,7 +19,7 @@
                 controller: 'addCtrl',
                 controllerAs: 'vm'
             })
-            .when('/detail', {
+            .when('/item/:itemId', {
                 templateUrl: 'detail/detail.view.html',
                 controller: 'detailCtrl',
                 controllerAs: 'vm'
@@ -44,7 +44,7 @@
     angular
         .module('myApp')
         .config(['$routeProvider', config])
-        //.service('myAppData', myAppData);
+        .service('myAppData', myAppData);
 
 
 
