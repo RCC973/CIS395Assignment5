@@ -19,7 +19,7 @@
     </div>
 
     <!-- List group -->
-    <ul class="list-group" ng-repeat="bid in item.bids">
+    <ul class="list-group" ng-repeat="bid in item.bids  | orderBy : 'price'">
         <li class="list-group-item">{{ "username: " + bid.username +
             "  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Bid Amount  $" +  bid.price }}</li>
 

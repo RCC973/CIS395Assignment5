@@ -4,20 +4,24 @@
     </div>
 </div>
 
-<form action="/api/items", method="post", role="form">
+<p>{{vm.message}}</p>
+
+<form ng-submit="vm.onSubmit()" role="form">
     <div class="form-group">
         <label for="name">Item Name:</label>
-        <input class="form-control" id="name" name="name">
+        <input class="form-control" id="name" name="name" ng-model="vm.formData.name">
     </div>
     <div class="form-group">
         <label for="description">Description:</label>
-        <input class="form-control" id="description" name="description">
+        <input class="form-control" id="description" name="description" ng-model="vm.formData.description">
     </div>
     <div class="form-group">
         <label for="startingPrice">Starting Price:</label>
-        <input class="form-control" type="number" id="startingPrice" name="startingPrice">
+        <input class="form-control" type="number" id="startingPrice" name="startingPrice" ng-model="vm.formData.startingPrice">
     </div>
 
     <button type="submit" class="btn btn-default">Submit</button>
+
 </form>
+
 

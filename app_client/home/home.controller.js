@@ -7,8 +7,8 @@
         .controller('homeCtrl', homeCtrl);
 
 
-    homeCtrl.$inject = ['$http', 'myAppData'];
-    function homeCtrl ($http,myAppData) {
+    homeCtrl.$inject = ['$http'];
+    function homeCtrl ($http) {
         var vm = this;
         vm.pageHeader = {
             title: 'Welcome to BidNow!',

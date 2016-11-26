@@ -53,3 +53,43 @@ module.exports.addItem = function(req, res) {
   renderHomepage(req,res);
 
 };
+
+/* GET 'Add review' page */
+module.exports.addReview = function(req, res){
+  getLocationInfo(req, res, function(req, res, responseData) {
+    renderReviewForm(req, res, responseData);
+  });
+};
+
+/* POST 'Add bid' page */
+module.exports.doAddBid = function(req, res){
+  var requestOptions, path, itemid, postdata;
+  itemid = req.params.itemid;
+  path = "/api/items/" + itemid + '/bids';
+  postdata = {
+    username: req.body.username,
+    price: req.body.price,
+  };
+  requestOptions = {
+    url : apiOptions.server + path,
+    method : "POST",
+    json : postdata
+  };
+  if (!postdata.author || !postdata.rating || !postdata.reviewText) {
+    res.redirect('/items/' + itemid + '/reviews/new?err=val');
+  } else {
+    request(
+        requestOptions,
+        function(err, response, body) {
+          if (response.statusCode === 201) {
+            res.redirect('/itemid/' + itemid);
+          } else if (response.statusCode === 400 && body.name && body.name === "ValidationError" ) {
+            res.redirect('/itemid/' + itemid + '/items');
+          } else {
+            console.log(body);
+            _showError(req, res, response.statusCode);
+          }
+        }
+    );
+  }
+};
